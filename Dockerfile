@@ -1,2 +1,2 @@
 FROM nginx
-ENTRYPOINT [ "nginx" ]
+CMD [ "nginx" ]

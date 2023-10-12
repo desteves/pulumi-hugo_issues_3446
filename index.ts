@@ -3,11 +3,10 @@ import * as awsx from "@pulumi/awsx";
 
 
 // TEST RESOURCES -- begin ////////////////////////////////////////////////////
-// An ECS cluster to deploy into
+// An ECS cluster to deploy fargate service into
 const cluster = new aws.ecs.Cluster("clusterTest123", {});
-// A private repo to use
+// A private repo to use for the docker images
 const repository = new awsx.ecr.Repository("repositoryTest123", {});
-export const url = repository.url
 // Create and upload an image, uses local Dockerfile
 const image = new awsx.ecr.Image("imageTest123", {
     repositoryUrl: repository.url,
@@ -39,3 +38,7 @@ const fargateService = new awsx.ecs.FargateService("fargateServiceTest123", {
     },
 });
 // EXAMPLE CODE -- end ////////////////////////////////////////////////////////
+
+
+
+export const urn = fargateService.urn
