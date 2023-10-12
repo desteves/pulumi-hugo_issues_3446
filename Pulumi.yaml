@@ -1,0 +1,3 @@
+name: pulumi-hugo_issues_3446
+runtime: nodejs
+description: A minimal AWS TypeScript Pulumi program

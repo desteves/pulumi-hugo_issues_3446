@@ -1,0 +1,12 @@
+{
+    "name": "pulumi-hugo_issues_3446",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^20"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.88.0",
+        "@pulumi/aws": "^6.5.0",
+        "@pulumi/awsx": "^1.0.6"
+    }
+}
